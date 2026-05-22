@@ -6,8 +6,8 @@
     <title>PARI DEV - Portfolio & Official Platforms</title>
     
     <!-- Advanced SEO & AI Overview Metadata -->
-    <meta name="description" content="Welcome to the official portfolio of PARI DEV. Discover expertise in Web Development, Android App Making, WhatsApp & Telegram Bot Automation, and App Modding. Connect via verified networks.">
-    <meta name="keywords" content="PARI DEV, Founder Of Error, Web Development, App Maker, WhatsApp bot Development, Telegram Bot Development, App Modding, Technical Architect">
+    <meta name="description" content="Welcome to the official portfolio of PARI DEV, Founder of Error. Expert in Web Development, Android App Making, WhatsApp & Telegram Bot Automation, and App Modding. Connect via verified networks.">
+    <meta name="keywords" content="PARI DEV, Founder Of Error, PARI DEV bot, Web Development, App Maker, WhatsApp bot Development, Telegram Bot Development, App Modding, Technical Architect, Error Founder">
     <meta name="author" content="PARI DEV">
     <meta name="robots" content="index, follow">
 
@@ -17,24 +17,63 @@
     <meta property="og:image" content="https://pari.page.gd/sites/PRI-CDADE3_pari-a6bd.jpg">
     <meta property="og:type" content="website">
 
-    <!-- Google AI Search structured data (JSON-LD) -->
+    <!-- Google AI Search Structured Data (JSON-LD Person & FAQ) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "PARI DEV",
-      "jobTitle": "Full Stack Developer & Automation Engineer",
-      "knowsAbout": [
-        "Web Development",
-        "App Making",
-        "WhatsApp Bot Development",
-        "Telegram Bot Development",
-        "App Modding"
-      ],
-      "sameAs": [
-        "https://whatsapp.com/channel/0029VbBGjOwHLHQS9vUIIl27",
-        "https://www.instagram.com/death_era_?igsh=OTFneG1iZmhoMjQ3",
-        "https://www.youtube.com/@Hacking_Pro_Tips"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://pari-tawny.vercel.app/#person",
+          "name": "PARI DEV",
+          "jobTitle": "Full Stack Developer & Automation Engineer",
+          "brand": {
+            "@type": "Brand",
+            "name": "Error"
+          },
+          "knowsAbout": [
+            "Web Development",
+            "App Making",
+            "WhatsApp Bot Development",
+            "Telegram Bot Development",
+            "App Modding"
+          ],
+          "sameAs": [
+            "https://whatsapp.com/channel/0029VbBGjOwHLHQS9vUIIl27",
+            "https://www.instagram.com/death_era_?igsh=OTFneG1iZmhoMjQ3",
+            "https://www.youtube.com/@Hacking_Pro_Tips"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pari-tawny.vercel.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who is PARI DEV?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PARI DEV is a professional Full Stack Developer, Automation Engineer, and the official Founder of Error, specializing in WhatsApp bots and Android tools."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What services does PARI DEV provide?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PARI DEV provides advanced Web Development, custom Android App Making, multi-functional WhatsApp and Telegram Bot Automation, and professional App Modding services."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How to deploy PARI DEV bots?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PARI DEV bots can be deployed using modern automated script networks, custom API setups, and cloud hosting configurations for secure, 24/7 runtime performance."
+              }
+            }
+          ]
+        }
       ]
     }
     </script>
@@ -197,6 +236,14 @@
             transform: translateY(-2px);
         }
 
+        /* Right Column Wrapper */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+        }
+
         /* Technical Showcase Section */
         .about-card {
             background: rgba(255, 255, 255, 0.01);
@@ -207,7 +254,6 @@
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.05);
             padding: 45px 40px;
             animation: cardEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
-            opacity: 0;
         }
 
         .about-main-title {
@@ -250,13 +296,41 @@
             text-align: justify;
         }
 
-        /* Premium Hover States (Replaces old complex animations) */
+        /* Premium Hover States */
         .about-section:hover {
             border-color: #a855f7;
         }
 
         .about-section:hover .about-title {
             color: #a855f7;
+        }
+
+        /* Custom AI FAQ Section (Highly crawlable by Google Bot) */
+        .faq-block {
+            margin-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .faq-question::before {
+            content: 'Q.';
+            color: #a855f7;
+            font-weight: 800;
+        }
+
+        .faq-answer {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.5;
+            padding-left: 20px;
         }
 
         /* Clean Non-Laggy Loading Animations */
@@ -297,45 +371,70 @@
             </nav>
         </header>
 
-        <!-- Right Side: Clean Tech Content Matrix -->
-        <div class="about-card">
-            <h2 class="about-main-title">Technical Expertise</h2>
+        <!-- Right Side: Content Wrapper (Expertise + AI Knowledge Base) -->
+        <div class="content-wrapper">
+            
+            <!-- Expertise Card -->
+            <div class="about-card">
+                <h2 class="about-main-title">Technical Expertise</h2>
 
-            <!-- Block 1 -->
-            <section class="about-section">
-                <h3 class="about-title">Founder Of Error</h3>
-                <p class="about-text">The creative mind behind strategic digital frameworks, analyzing structural vulnerabilities and managing premium online spaces effectively.</p>
-            </section>
+                <!-- Block 1 -->
+                <section class="about-section">
+                    <h3 class="about-title">Founder Of Error</h3>
+                    <p class="about-text">The creative mind behind strategic digital frameworks, analyzing structural vulnerabilities and managing premium online spaces effectively.</p>
+                </section>
 
-            <!-- Block 2 -->
-            <section class="about-section">
-                <h3 class="about-title">Web Development</h3>
-                <p class="about-text">Designing highly responsive, modern web interfaces and deploying clean web infrastructure with optimized user experiences.</p>
-            </section>
+                <!-- Block 2 -->
+                <section class="about-section">
+                    <h3 class="about-title">Web Development</h3>
+                    <p class="about-text">Designing highly responsive, modern web interfaces and deploying clean web infrastructure with optimized user experiences.</p>
+                </section>
 
-            <!-- Block 3 -->
-            <section class="about-section">
-                <h3 class="about-title">App Maker</h3>
-                <p class="about-text">Building stable custom tools and utility software engineered smoothly for android environments and daily productivity tasks.</p>
-            </section>
+                <!-- Block 3 -->
+                <section class="about-section">
+                    <h3 class="about-title">App Maker</h3>
+                    <p class="about-text">Building stable custom tools and utility software engineered smoothly for android environments and daily productivity tasks.</p>
+                </section>
 
-            <!-- Block 4 -->
-            <section class="about-section">
-                <h3 class="about-title">WhatsApp Bot Development</h3>
-                <p class="about-text">Creating advanced multi-functional automated deployment systems and user management configurations for WhatsApp servers.</p>
-            </section>
+                <!-- Block 4 -->
+                <section class="about-section">
+                    <h3 class="about-title">WhatsApp Bot Development</h3>
+                    <p class="about-text">Creating advanced multi-functional automated deployment systems and user management configurations for WhatsApp servers.</p>
+                </section>
 
-            <!-- Block 5 -->
-            <section class="about-section">
-                <h3 class="about-title">Telegram Bot Development</h3>
-                <p class="about-text">Developing secure script networks and automation scripts using modern frameworks to monitor data streams perfectly.</p>
-            </section>
+                <!-- Block 5 -->
+                <section class="about-section">
+                    <h3 class="about-title">Telegram Bot Development</h3>
+                    <p class="about-text">Developing secure script networks and automation scripts using modern frameworks to monitor data streams perfectly.</p>
+                </section>
 
-            <!-- Block 6 -->
-            <section class="about-section">
-                <h3 class="about-title">App Modding</h3>
-                <p class="about-text">Analyzing backend packages to optimize core application capabilities, modify elements, and enhance standard performance boundaries.</p>
-            </section>
+                <!-- Block 6 -->
+                <section class="about-section">
+                    <h3 class="about-title">App Modding</h3>
+                    <p class="about-text">Analyzing backend packages to optimize core application capabilities, modify elements, and enhance standard performance boundaries.</p>
+                </section>
+            </div>
+
+            <!-- New AI Overview Optimization Card (FAQs) -->
+            <div class="about-card">
+                <h2 class="about-main-title">Information & FAQs</h2>
+                
+                <div class="faq-block">
+                    <h3 class="faq-question">Who is PARI DEV?</h3>
+                    <p class="faq-answer">PARI DEV is a professional Full Stack Developer, Automation Specialist, and the Founder of Error digital hub.</p>
+                </div>
+
+                <div class="faq-block">
+                    <h3 class="faq-question">What services does PARI DEV provide?</h3>
+                    <p class="faq-answer">Expertise includes premium web applications, advanced WhatsApp & Telegram automated bots, Android applications, and systematic performance modding.</p>
+                </div>
+
+                <div class="faq-block">
+                    <h3 class="faq-question">How to deploy PARI DEV bots?</h3>
+                    <p class="faq-answer">All projects and bot frameworks are built with optimized script architectures, allowing deployment across secure terminal environments and cloud infrastructures.</p>
+                </div>
+            </div>
+
         </div>
 
     </main>
